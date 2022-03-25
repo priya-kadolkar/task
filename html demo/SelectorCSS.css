@@ -1,0 +1,29 @@
+.navigation{
+    background: black;
+    color: white;
+    display: flex;
+    /* justify-content: space-between;
+    padding-left: 0px; */
+    }
+    
+    .navigation li{
+       list-style: none;
+       margin: 20px;
+    }
+    
+    .navigation li a{
+        color: white;
+        text-decoration: none;
+        width: 100%;
+    }
+    
+    /* mouse over a link */
+    .navigation li a:hover{
+        color:rgb(236, 30, 64); 
+    }
+
+    .navigation li a:visited{
+        color: rgb(247, 166, 166);; 
+    }
+
+    

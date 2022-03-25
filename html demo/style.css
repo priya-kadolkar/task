@@ -1,0 +1,84 @@
+body{
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+
+}
+header{
+    position: sticky;
+    top: 15px;
+}
+
+.navigation{
+background: black;
+color: white;
+display: flex;
+justify-content: space-between;
+padding-left: 0px;
+}
+
+.navigation li{
+   list-style: none;
+   margin: 20px;
+}
+
+.navigation li a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+/* mouse over a link */
+.navigation li a:hover{
+    color:rgb(236, 30, 64); 
+}
+
+/* Unvisited link */
+.navigation li a:link{
+    color:rgb(206, 219, 24); 
+}
+
+/* Visited link */
+.navigation li a:visited{
+    color: rgb(247, 166, 166);; 
+}
+
+/* Selected link to get active */
+.navigation li a:active{
+    color: rgb(42, 19, 143);; 
+}
+
+/* pseudo element i.e first-line  */
+#home p::first-line{
+    color: rgb(107, 20, 158);
+}
+/* pseudo element i.e first-letter  */
+#cirriculum p::first-letter{
+    color: red;
+    font-size: 50px;
+    font-style: italic;
+}
+
+/* Pseudo-elements and HTML Classes */
+caption.heading::first-letter{
+    color: rgb(34, 233, 16);
+}
+/* pseudo element i.e ::before  */
+#cirriculum .html_content::before{
+    content:"Hypertext Markup Language ";
+}
+/* pseudo element i.e ::after  */
+#cirriculum .js_content::after{
+    content:"(JS)";
+}
+/* pseudo element i.e ::marker  */
+#cirriculum .ul_content::marker {
+    color: darkmagenta;
+    font-size: 23px;
+}
+/* pseudo element i.e ::selection  */
+#home h1::selection{
+    color:chartreuse;
+    background: rgb(224, 77, 77);
+}
