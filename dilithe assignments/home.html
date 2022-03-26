@@ -9,25 +9,85 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="assets/bootcamp.jpg" alt="Bootcamp logo has been failed to view">
-        </div>
         <div class="nav_links">
-            <ul>
+            <ul> 
+                <img src="assets/bootcamp.jpg" width="100px" height="70px" alt="Bootcamp logo has been failed to view">
                 <li><a href="#home">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contactus.html">Contact us</a></li>
-                <li><a href="#help">Help</a></li>
             </ul>
         </div>
     </header>
 
     <section id="home">
-        <article style="margin-left: 80px;margin-top: 100px;">
+        <article>
             <h2>Boot Camp Introduction</h2>
             <p>Boot camp, a training camp for learning various types of skills Dev bootcamp,a defunct<br> computer programming technical school Fitness boot camp, a type of physical training <br>program.
             Military recruit training Coding bootcamp, bootcamp for teaching programming <br>skills</p>
         </article>
     </section>
+
+    <div class="slideshow-container" style="margin-top: 50px;">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="./assets/carousel_images/BootCamp.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="./assets/carousel_images/html.png" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="./assets/carousel_images/javascript.png" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./assets/carousel_images/angular.png" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./assets/carousel_images/java.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+    </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
 </body>
 </html>
