@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetElementBy</title>
+</head>
+<body>
+    Begin
+    <hr>
+    <form action="">
+        <label>Search the site:</label>
+        <input type="text" name="search" id="search">
+        <input type="button" name="searchbtn" id="searchbtn" value="Search!" onclick="func()">
+        <hr>
+        <div class="class1">
+            <label>Search the visitors:</label><br>
+            <label>Age:</label>
+            <input type="radio" name="age" id="age1" value="less than 18" ><label for="age1" >less than 18</label>
+            <input type="radio" name="age" id="age2" value="18-50" ><label for="age2">18-50</label>
+            <input type="radio" name="age" id="age3" value="more than 50" ><label for="age3">more than 50</label>
+        </div>
+            
+        <div class="class2">
+            <label for="">Additionally</label>
+            <input type="text" name="text1" id="text1" onclick="">
+            <input type="text" name="text2" id="text2">
+            <input type="text" name="text3" id="text3">
+        </div>
+        <input type="button" name="btn" id="btn" value="Search!" onclick="func1()">
+    </form>  
+    <script>
+        function func(){
+            let a=document.getElementById('search').value;
+            console.log(a);
+        }
+       function func1()
+       {
+            var radioVal = document.getElementsByName('age');
+            for(i = 0; i < radioVal.length; i++) {
+                if(radioVal[i].checked)
+                console.log(radioVal[i].value);
+            }
+
+            let additional=document.querySelector('.class2')
+            // console.log(additional.childNodes)
+            for(let a of additional.childNodes){
+                    if(a.value!=undefined){
+                        console.log(a.value)
+                    }
+                
+            }
+       }
+        
+        
+    </script>
+</body>
+</html> 
